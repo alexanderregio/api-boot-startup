@@ -4,14 +4,11 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<OutputType>Library</OutputType>
+		<IsPackable>true</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Properties\" />
 	</ItemGroup>
 
 </Project>
