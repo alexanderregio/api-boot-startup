@@ -1,7 +1,7 @@
 ﻿namespace Libraries;
 
 /// <summary>
-/// Classe que implementa IStartup e pode ser herdada por uma classe Startup na inicialização de uma WebApi
+/// Classe abstrata que implementa IStartup e deve ser herdada por uma classe Startup na inicialização de uma WebApi
 /// Contém configurações básicas refrequentemente utilizadas por uma API
 /// </summary>
 public abstract class ApiBootStartup : IStartup
