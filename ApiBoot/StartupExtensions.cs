@@ -1,4 +1,4 @@
-﻿namespace ApiBootStartup;
+﻿namespace ApiBoot;
 
 /// <summary>
 /// Extensão da classe Startup

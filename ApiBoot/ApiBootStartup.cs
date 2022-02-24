@@ -1,4 +1,7 @@
-﻿namespace ApiBootStartup;
+﻿using Microsoft.Extensions.PlatformAbstractions;
+using System.Text.Json.Serialization;
+
+namespace ApiBoot;
 
 /// <summary>
 /// Classe abstrata que implementa IStartup e deve ser herdada por uma classe Startup na inicialização de uma WebApi
@@ -35,8 +38,19 @@ public abstract class ApiBootStartup : IStartup
     {
         ConfigureWebApiServices(services);
 
-        services.AddControllers();
+        services
+            .AddControllers()
+            .AddJsonOptions(opts => opts.JsonSerializerOptions
+                .Converters.Add(new JsonStringEnumConverter()));
+
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+
+        services.AddSwaggerGen(options =>
+        {
+            var xmlPath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath,
+                                       $"{PlatformServices.Default.Application.ApplicationName}.xml");
+
+            options.IncludeXmlComments(xmlPath);
+        });
     }
 }
