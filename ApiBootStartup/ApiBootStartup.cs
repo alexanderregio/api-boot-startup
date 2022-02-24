@@ -1,8 +1,8 @@
-﻿namespace Libraries;
+﻿namespace ApiBootStartup;
 
 /// <summary>
 /// Classe abstrata que implementa IStartup e deve ser herdada por uma classe Startup na inicialização de uma WebApi
-/// Contém configurações básicas refrequentemente utilizadas por uma API
+/// Contém configurações frequentemente utilizadas por uma API básica
 /// </summary>
 public abstract class ApiBootStartup : IStartup
 {
@@ -25,8 +25,6 @@ public abstract class ApiBootStartup : IStartup
         }
 
         app.UseHttpsRedirection();
-
-        app.UseAuthorization();
 
         app.MapControllers();
 
