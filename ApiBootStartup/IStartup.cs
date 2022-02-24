@@ -1,4 +1,4 @@
-﻿namespace Libraries;
+﻿namespace ApiBootStartup;
 
 /// <summary>
 /// Interface para implementação da classe Startup
