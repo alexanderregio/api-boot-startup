@@ -8,6 +8,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="C:\Users\alexander\.nuget\packages\apiboot\1.0.0\contentFiles\any\net6.0\nuget.config" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="ApiBoot" Version="1.0.0" />
 	</ItemGroup>
 
