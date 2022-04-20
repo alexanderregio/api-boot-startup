@@ -5,6 +5,12 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<OutputType>Library</OutputType>
 		<IsPackable>true</IsPackable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>1.0.0</Version>
+		<RepositoryUrl>https://github.com/alexanderregio/api-boot-startup</RepositoryUrl>
+		<Description>Pacote para encapsular inicializações de serviços repetitivos.
+Permite a reconstrução da classe Startup para APIs em .Net Core 6</Description>
+		<PackageReleaseNotes>Initial</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
